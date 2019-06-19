@@ -1,0 +1,6 @@
+framework module Pods_TZMomentum {
+  umbrella header "Pods-TZMomentum-umbrella.h"
+
+  export *
+  module * { export * }
+}

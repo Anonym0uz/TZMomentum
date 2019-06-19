@@ -7,24 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5D31EFD51F23E4E35AE367 /* Pods_TZMomentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D88BED2349307DA9149DE9 /* Pods_TZMomentum.framework */; };
 		B95B01B722B983F7005D7BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01B622B983F7005D7BC7 /* AppDelegate.swift */; };
 		B95B01B922B983F7005D7BC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01B822B983F7005D7BC7 /* ViewController.swift */; };
 		B95B01BC22B983F7005D7BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95B01BA22B983F7005D7BC7 /* Main.storyboard */; };
-		B95B01BF22B983F7005D7BC7 /* TZMomentum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B95B01BD22B983F7005D7BC7 /* TZMomentum.xcdatamodeld */; };
 		B95B01C122B983F8005D7BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95B01C022B983F8005D7BC7 /* Assets.xcassets */; };
 		B95B01C422B983F8005D7BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95B01C222B983F8005D7BC7 /* LaunchScreen.storyboard */; };
 		B95B01D122B98447005D7BC7 /* TZMFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D022B98447005D7BC7 /* TZMFirstViewController.swift */; };
 		B95B01D322B98458005D7BC7 /* TZMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D222B98458005D7BC7 /* TZMView.swift */; };
 		B95B01D522B98467005D7BC7 /* TZMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D422B98467005D7BC7 /* TZMModel.swift */; };
 		B95B01D722B98601005D7BC7 /* TZAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D622B98601005D7BC7 /* TZAPI.swift */; };
+		B9E9A0F422BA52F600F1AA72 /* TZFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E9A0F322BA52F600F1AA72 /* TZFunctions.swift */; };
+		B9E9A0F722BA592900F1AA72 /* TZMomentum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9E9A0F522BA592900F1AA72 /* TZMomentum.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4908C00DD632AFE21BCB7F02 /* Pods-TZMomentum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZMomentum.release.xcconfig"; path = "Target Support Files/Pods-TZMomentum/Pods-TZMomentum.release.xcconfig"; sourceTree = "<group>"; };
+		80D88BED2349307DA9149DE9 /* Pods_TZMomentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TZMomentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95B01B322B983F7005D7BC7 /* TZMomentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TZMomentum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95B01B622B983F7005D7BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B95B01B822B983F7005D7BC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B95B01BB22B983F7005D7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B95B01BE22B983F7005D7BC7 /* TZMomentum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TZMomentum.xcdatamodel; sourceTree = "<group>"; };
 		B95B01C022B983F8005D7BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B95B01C322B983F8005D7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B95B01C522B983F8005D7BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		B95B01D222B98458005D7BC7 /* TZMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZMView.swift; sourceTree = "<group>"; };
 		B95B01D422B98467005D7BC7 /* TZMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZMModel.swift; sourceTree = "<group>"; };
 		B95B01D622B98601005D7BC7 /* TZAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZAPI.swift; sourceTree = "<group>"; };
+		B9E9A0F322BA52F600F1AA72 /* TZFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZFunctions.swift; sourceTree = "<group>"; };
+		B9E9A0F622BA592900F1AA72 /* TZMomentum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TZMomentum.xcdatamodel; sourceTree = "<group>"; };
+		E0B28D6DDA9D19FA423AE9BC /* Pods-TZMomentum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZMomentum.debug.xcconfig"; path = "Target Support Files/Pods-TZMomentum/Pods-TZMomentum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5D31EFD51F23E4E35AE367 /* Pods_TZMomentum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B2139B762C45F8A1E4F3CDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80D88BED2349307DA9149DE9 /* Pods_TZMomentum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9921AEB5AC4CF1BBF811D0EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0B28D6DDA9D19FA423AE9BC /* Pods-TZMomentum.debug.xcconfig */,
+				4908C00DD632AFE21BCB7F02 /* Pods-TZMomentum.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B95B01AA22B983F7005D7BC7 = {
 			isa = PBXGroup;
 			children = (
 				B95B01B522B983F7005D7BC7 /* TZMomentum */,
 				B95B01B422B983F7005D7BC7 /* Products */,
+				9921AEB5AC4CF1BBF811D0EA /* Pods */,
+				6B2139B762C45F8A1E4F3CDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,13 +92,14 @@
 			children = (
 				B95B01CC22B98419005D7BC7 /* FirstController */,
 				B95B01CB22B98410005D7BC7 /* API */,
+				B9E9A0F322BA52F600F1AA72 /* TZFunctions.swift */,
 				B95B01B622B983F7005D7BC7 /* AppDelegate.swift */,
 				B95B01B822B983F7005D7BC7 /* ViewController.swift */,
 				B95B01BA22B983F7005D7BC7 /* Main.storyboard */,
 				B95B01C022B983F8005D7BC7 /* Assets.xcassets */,
 				B95B01C222B983F8005D7BC7 /* LaunchScreen.storyboard */,
 				B95B01C522B983F8005D7BC7 /* Info.plist */,
-				B95B01BD22B983F7005D7BC7 /* TZMomentum.xcdatamodeld */,
+				B9E9A0F522BA592900F1AA72 /* TZMomentum.xcdatamodeld */,
 			);
 			path = TZMomentum;
 			sourceTree = "<group>";
@@ -126,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B95B01C822B983F8005D7BC7 /* Build configuration list for PBXNativeTarget "TZMomentum" */;
 			buildPhases = (
+				B81CC19818011BB430FE4C63 /* [CP] Check Pods Manifest.lock */,
 				B95B01AF22B983F7005D7BC7 /* Sources */,
 				B95B01B022B983F7005D7BC7 /* Frameworks */,
 				B95B01B122B983F7005D7BC7 /* Resources */,
+				79AFFCAD7CC227460A2DF100 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +174,7 @@
 		B95B01AB22B983F7005D7BC7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TZM;
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Alexander Orlov";
@@ -185,6 +215,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		79AFFCAD7CC227460A2DF100 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TZMomentum/Pods-TZMomentum-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TZMomentum/Pods-TZMomentum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B81CC19818011BB430FE4C63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TZMomentum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B95B01AF22B983F7005D7BC7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -192,11 +269,12 @@
 			files = (
 				B95B01B922B983F7005D7BC7 /* ViewController.swift in Sources */,
 				B95B01D122B98447005D7BC7 /* TZMFirstViewController.swift in Sources */,
-				B95B01BF22B983F7005D7BC7 /* TZMomentum.xcdatamodeld in Sources */,
+				B9E9A0F422BA52F600F1AA72 /* TZFunctions.swift in Sources */,
 				B95B01D522B98467005D7BC7 /* TZMModel.swift in Sources */,
 				B95B01D322B98458005D7BC7 /* TZMView.swift in Sources */,
 				B95B01D722B98601005D7BC7 /* TZAPI.swift in Sources */,
 				B95B01B722B983F7005D7BC7 /* AppDelegate.swift in Sources */,
+				B9E9A0F722BA592900F1AA72 /* TZMomentum.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +418,7 @@
 		};
 		B95B01C922B983F8005D7BC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B28D6DDA9D19FA423AE9BC /* Pods-TZMomentum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,13 +431,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ao.TZMomentum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		B95B01CA22B983F8005D7BC7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4908C00DD632AFE21BCB7F02 /* Pods-TZMomentum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -371,7 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ao.TZMomentum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -400,12 +480,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B95B01BD22B983F7005D7BC7 /* TZMomentum.xcdatamodeld */ = {
+		B9E9A0F522BA592900F1AA72 /* TZMomentum.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B95B01BE22B983F7005D7BC7 /* TZMomentum.xcdatamodel */,
+				B9E9A0F622BA592900F1AA72 /* TZMomentum.xcdatamodel */,
 			);
-			currentVersion = B95B01BE22B983F7005D7BC7 /* TZMomentum.xcdatamodel */;
+			currentVersion = B9E9A0F622BA592900F1AA72 /* TZMomentum.xcdatamodel */;
 			path = TZMomentum.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
