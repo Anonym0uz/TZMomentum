@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B95B01B722B983F7005D7BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01B622B983F7005D7BC7 /* AppDelegate.swift */; };
+		B95B01B922B983F7005D7BC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01B822B983F7005D7BC7 /* ViewController.swift */; };
+		B95B01BC22B983F7005D7BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95B01BA22B983F7005D7BC7 /* Main.storyboard */; };
+		B95B01BF22B983F7005D7BC7 /* TZMomentum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B95B01BD22B983F7005D7BC7 /* TZMomentum.xcdatamodeld */; };
+		B95B01C122B983F8005D7BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95B01C022B983F8005D7BC7 /* Assets.xcassets */; };
+		B95B01C422B983F8005D7BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95B01C222B983F8005D7BC7 /* LaunchScreen.storyboard */; };
+		B95B01D122B98447005D7BC7 /* TZMFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D022B98447005D7BC7 /* TZMFirstViewController.swift */; };
+		B95B01D322B98458005D7BC7 /* TZMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D222B98458005D7BC7 /* TZMView.swift */; };
+		B95B01D522B98467005D7BC7 /* TZMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D422B98467005D7BC7 /* TZMModel.swift */; };
+		B95B01D722B98601005D7BC7 /* TZAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D622B98601005D7BC7 /* TZAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B95B01B322B983F7005D7BC7 /* TZMomentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TZMomentum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B95B01B622B983F7005D7BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B95B01B822B983F7005D7BC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B95B01BB22B983F7005D7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B95B01BE22B983F7005D7BC7 /* TZMomentum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TZMomentum.xcdatamodel; sourceTree = "<group>"; };
+		B95B01C022B983F8005D7BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B95B01C322B983F8005D7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B95B01C522B983F8005D7BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B95B01D022B98447005D7BC7 /* TZMFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZMFirstViewController.swift; sourceTree = "<group>"; };
+		B95B01D222B98458005D7BC7 /* TZMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZMView.swift; sourceTree = "<group>"; };
+		B95B01D422B98467005D7BC7 /* TZMModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZMModel.swift; sourceTree = "<group>"; };
+		B95B01D622B98601005D7BC7 /* TZAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZAPI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B95B01B022B983F7005D7BC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B95B01AA22B983F7005D7BC7 = {
+			isa = PBXGroup;
+			children = (
+				B95B01B522B983F7005D7BC7 /* TZMomentum */,
+				B95B01B422B983F7005D7BC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B95B01B422B983F7005D7BC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B95B01B322B983F7005D7BC7 /* TZMomentum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B95B01B522B983F7005D7BC7 /* TZMomentum */ = {
+			isa = PBXGroup;
+			children = (
+				B95B01CC22B98419005D7BC7 /* FirstController */,
+				B95B01CB22B98410005D7BC7 /* API */,
+				B95B01B622B983F7005D7BC7 /* AppDelegate.swift */,
+				B95B01B822B983F7005D7BC7 /* ViewController.swift */,
+				B95B01BA22B983F7005D7BC7 /* Main.storyboard */,
+				B95B01C022B983F8005D7BC7 /* Assets.xcassets */,
+				B95B01C222B983F8005D7BC7 /* LaunchScreen.storyboard */,
+				B95B01C522B983F8005D7BC7 /* Info.plist */,
+				B95B01BD22B983F7005D7BC7 /* TZMomentum.xcdatamodeld */,
+			);
+			path = TZMomentum;
+			sourceTree = "<group>";
+		};
+		B95B01CB22B98410005D7BC7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B95B01D622B98601005D7BC7 /* TZAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B95B01CC22B98419005D7BC7 /* FirstController */ = {
+			isa = PBXGroup;
+			children = (
+				B95B01CF22B98431005D7BC7 /* Controller */,
+				B95B01CE22B9842B005D7BC7 /* View */,
+				B95B01CD22B98426005D7BC7 /* Model */,
+			);
+			path = FirstController;
+			sourceTree = "<group>";
+		};
+		B95B01CD22B98426005D7BC7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B95B01D422B98467005D7BC7 /* TZMModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B95B01CE22B9842B005D7BC7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B95B01D222B98458005D7BC7 /* TZMView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B95B01CF22B98431005D7BC7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B95B01D022B98447005D7BC7 /* TZMFirstViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B95B01B222B983F7005D7BC7 /* TZMomentum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B95B01C822B983F8005D7BC7 /* Build configuration list for PBXNativeTarget "TZMomentum" */;
+			buildPhases = (
+				B95B01AF22B983F7005D7BC7 /* Sources */,
+				B95B01B022B983F7005D7BC7 /* Frameworks */,
+				B95B01B122B983F7005D7BC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TZMomentum;
+			productName = TZMomentum;
+			productReference = B95B01B322B983F7005D7BC7 /* TZMomentum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B95B01AB22B983F7005D7BC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alexander Orlov";
+				TargetAttributes = {
+					B95B01B222B983F7005D7BC7 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B95B01AE22B983F7005D7BC7 /* Build configuration list for PBXProject "TZMomentum" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B95B01AA22B983F7005D7BC7;
+			productRefGroup = B95B01B422B983F7005D7BC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B95B01B222B983F7005D7BC7 /* TZMomentum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B95B01B122B983F7005D7BC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95B01C422B983F8005D7BC7 /* LaunchScreen.storyboard in Resources */,
+				B95B01C122B983F8005D7BC7 /* Assets.xcassets in Resources */,
+				B95B01BC22B983F7005D7BC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B95B01AF22B983F7005D7BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B95B01B922B983F7005D7BC7 /* ViewController.swift in Sources */,
+				B95B01D122B98447005D7BC7 /* TZMFirstViewController.swift in Sources */,
+				B95B01BF22B983F7005D7BC7 /* TZMomentum.xcdatamodeld in Sources */,
+				B95B01D522B98467005D7BC7 /* TZMModel.swift in Sources */,
+				B95B01D322B98458005D7BC7 /* TZMView.swift in Sources */,
+				B95B01D722B98601005D7BC7 /* TZAPI.swift in Sources */,
+				B95B01B722B983F7005D7BC7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B95B01BA22B983F7005D7BC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B95B01BB22B983F7005D7BC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B95B01C222B983F8005D7BC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B95B01C322B983F8005D7BC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B95B01C622B983F8005D7BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B95B01C722B983F8005D7BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B95B01C922B983F8005D7BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AM96636MZX;
+				INFOPLIST_FILE = TZMomentum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ao.TZMomentum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B95B01CA22B983F8005D7BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AM96636MZX;
+				INFOPLIST_FILE = TZMomentum/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ao.TZMomentum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B95B01AE22B983F7005D7BC7 /* Build configuration list for PBXProject "TZMomentum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95B01C622B983F8005D7BC7 /* Debug */,
+				B95B01C722B983F8005D7BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B95B01C822B983F8005D7BC7 /* Build configuration list for PBXNativeTarget "TZMomentum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B95B01C922B983F8005D7BC7 /* Debug */,
+				B95B01CA22B983F8005D7BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B95B01BD22B983F7005D7BC7 /* TZMomentum.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B95B01BE22B983F7005D7BC7 /* TZMomentum.xcdatamodel */,
+			);
+			currentVersion = B95B01BE22B983F7005D7BC7 /* TZMomentum.xcdatamodel */;
+			path = TZMomentum.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B95B01AB22B983F7005D7BC7 /* Project object */;
+}
