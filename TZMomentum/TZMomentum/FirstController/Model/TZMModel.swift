@@ -96,7 +96,7 @@ class TZMModel: NSObject {
         complete(true, normalArray)
         
         
-        getCrossRate()
+//        getCrossRate()
         
 //        getFromCoreData(entity: "6") { (success, arra) in
 //            print(arra)
@@ -177,23 +177,27 @@ class TZMModel: NSObject {
         return results.count > 0
     }
     
-    func findCurrency(currency: String, result: (Bool, NSManagedObject) -> ()) {
+    func findCurrency(currency: String, result: (Bool, NSManagedObject?) -> ()) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
-        var fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AllCurrency")
+        var entity = "AllCurrency"
         if currency.count == 6 {
-            fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AllCurrencyServer")
+            entity = "AllCurrencyServer"
         }
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
         fetchRequest.predicate = NSPredicate(format: "name = %@", currency)
-        var results: [NSManagedObject] = []
+//        var results: [NSManagedObject] = []
         
         do {
-            results = try context.fetch(fetchRequest)
+            let results = try context.fetch(fetchRequest)
             if results.count != 0 {
-                let objUpd = results[0]
+                let objUpd = results[0] as! NSManagedObject
+                for data in results as! [NSManagedObject] {
+                    print(data)
+                }
                 result(true, objUpd)
             } else {
-                result(false, NSManagedObject())
+                result(false, nil)
             }
         }
         catch {
@@ -254,9 +258,8 @@ class TZMModel: NSObject {
         
         do {
             let result = try context.fetch(request)
-            var objUpd: NSManagedObject = NSManagedObject()
             if result.count != 0 {
-                objUpd = result[0] as! NSManagedObject
+                let objUpd = result[0] as! NSManagedObject
                 objUpd.value(forKey: "name")
                 return objUpd.value(forKey: "value") as! Double
             } else {
