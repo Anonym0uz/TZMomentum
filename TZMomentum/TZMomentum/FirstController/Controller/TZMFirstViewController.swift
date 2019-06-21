@@ -15,13 +15,13 @@ class TZMFirstViewController: UIViewController {
     var pickerView: UIPickerView!
     var pickerTitles: Array<String> = Array<String>()
     var currencyChange = 1
+    var pickerHide: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         createKVOServers()
         let updateButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(getCurrencyFromModel))
         TZFunctions().setupNavigationController(navigationCtrl: self.navigationController, navigationItem: self.navigationItem, navigationTitle: "Money converter", leftButton: nil, rightButton: updateButton)
-//        TZMModel.sharedModel.workWithCoreData()
         createView()
     }
     
@@ -31,6 +31,10 @@ class TZMFirstViewController: UIViewController {
     
     func createView() {
         view.backgroundColor = UIColor.white
+        
+        let hideGest = UITapGestureRecognizer(target: self, action: #selector(hideGesture))
+        view.addGestureRecognizer(hideGest)
+        
         mview = TZMView(frame: .zero)
         mview.delegate = self
         view.addSubview(mview)
@@ -39,46 +43,90 @@ class TZMFirstViewController: UIViewController {
         pickerView.backgroundColor = UIColor.lightGray
         pickerView.dataSource = self
         pickerView.delegate = self
+        view.addSubview(pickerView)
         
         mview.snp.remakeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
+        
         getCurrencyFromModel()
     }
     
     @objc fileprivate func currencyNeedChange(sender: Notification) {
+        if currencyChange == sender.userInfo!["currencyNum"] as! Int && pickerHide == false {
+            showPickerView(false, data: sender.userInfo!)
+        } else {
+            showPickerView(true, data: sender.userInfo!)
+        }
         currencyChange = sender.userInfo!["currencyNum"] as! Int
-        showPickerView(true, data: sender.userInfo!)
     }
     
     fileprivate func showPickerView(_ show: Bool, data: Any) {
         if show {
             view.endEditing(true)
-            view.addSubview(pickerView)
-            pickerView.snp.remakeConstraints { (make) in
-                make.bottom.equalTo(view)
-                make.left.right.equalTo(view)
-            }
             if currencyChange == 1 {
                 self.pickerView.selectRow(currencyNamesArray.index(of: (data as! [AnyHashable : Any])["selectedCurrency"] as! String)!, inComponent: 0, animated: true)
             } else {
                 self.pickerView.selectRow(currencyNamesArray.index(of: (data as! [AnyHashable : Any])["selectedCurrency"] as! String)!, inComponent: 0, animated: true)
             }
+        }
+        pickerHide = !show
+        view.updateConstraintsIfNeeded()
+        view.setNeedsUpdateConstraints()
+        UIView.animate(withDuration: 0.05) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        if pickerHide {
+            pickerView.snp.remakeConstraints { (make) in
+                make.bottom.equalTo(view)
+                make.left.right.equalTo(view)
+                make.height.equalTo(0)
+            }
         } else {
-            pickerView.removeFromSuperview()
+            pickerView.snp.remakeConstraints { (make) in
+                make.bottom.equalTo(view)
+                make.left.right.equalTo(view)
+                make.height.equalTo(220)
+            }
         }
     }
     
     // MARK: - Buttons handler
     @objc func getCurrencyFromModel() {
+        hideGesture()
         IJProgressView.shared.showProgressView()
         TZMModel.sharedModel.getDatas { (success, response, error) in
             if success && error.count == 0 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                self.animateNavBar(title: "Данные успешно обновлены!")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                     IJProgressView.shared.hideProgressView()
+                    self.animateNavBar(title: "Money converter")
                 })
+            } else {
+                let alert = UIAlertController(title: "TZMomentum", message: "Ошибка при получении данных,\rпопробуйте обновить позднее.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
+    }
+    
+    // MARK: - Animations for nav title
+    func animateNavBar(title: String) {
+        let fadeTextAnimation = CATransition()
+        fadeTextAnimation.duration = 0.2
+        fadeTextAnimation.type = CATransitionType.fade
+        self.navigationController?.navigationBar.layer.add(fadeTextAnimation, forKey: "fadeText")
+        self.navigationItem.title = title
+    }
+    
+    // MARK: - Hide gesture
+    @objc func hideGesture() {
+        view.endEditing(true)
+        showPickerView(false, data: [:])
     }
 }
 

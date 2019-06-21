@@ -48,7 +48,7 @@ class TZMView: UIView {
     
     let calculateButton: UIButton = {
         let butt = UIButton()
-        butt.setTitle("Calculate!", for: .normal)
+        butt.setTitle("Конвертировать", for: .normal)
         butt.setTitleColor(UIColor.black, for: .normal)
         butt.translatesAutoresizingMaskIntoConstraints = false
         butt.clipsToBounds = true
@@ -60,7 +60,7 @@ class TZMView: UIView {
     
     let swapCurrencyButton: UIButton = {
         let butt = UIButton()
-        butt.setTitle("Swap!", for: .normal)
+        butt.setTitle("Поменять", for: .normal)
         butt.setTitleColor(UIColor.black, for: .normal)
         butt.translatesAutoresizingMaskIntoConstraints = false
         butt.clipsToBounds = true
@@ -73,7 +73,7 @@ class TZMView: UIView {
     let currencyTF1: UITextField = {
         let tf = UITextField()
         tf.tag = 1
-        tf.placeholder = "Value1"
+        tf.text = "1"
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 10
@@ -89,7 +89,7 @@ class TZMView: UIView {
     let currencyTF2: UITextField = {
         let tf = UITextField()
         tf.tag = 2
-        tf.placeholder = "Value2"
+        tf.placeholder = "Выходная валюта"
         tf.translatesAutoresizingMaskIntoConstraints = false
         tf.clipsToBounds = true
         tf.layer.cornerRadius = 10
@@ -163,7 +163,7 @@ class TZMView: UIView {
             make.centerX.equalTo(self)
             make.top.equalTo(currencyTF2.snp.bottom).offset(20)
             make.height.equalTo(30)
-            make.width.equalTo(100)
+            make.width.equalTo(150)
         }
     }
     
@@ -212,9 +212,6 @@ extension TZMView: UITextFieldDelegate {
         if (currencyTF1.text?.count)! > 0 {
             calculateClicked()
         }
-//        else if textField.tag == 1 {
-//            textFieldDidBeginEditing(currencyTF2)
-//        }
         return true
     }
 }
