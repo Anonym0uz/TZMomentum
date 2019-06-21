@@ -48,8 +48,19 @@ class TZMView: UIView {
     
     let calculateButton: UIButton = {
         let butt = UIButton()
-        butt.tag = 2
         butt.setTitle("Calculate!", for: .normal)
+        butt.setTitleColor(UIColor.black, for: .normal)
+        butt.translatesAutoresizingMaskIntoConstraints = false
+        butt.clipsToBounds = true
+        butt.layer.cornerRadius = 10
+        butt.layer.borderColor = UIColor.black.cgColor
+        butt.layer.borderWidth = 1.0
+        return butt
+    }()
+    
+    let swapCurrencyButton: UIButton = {
+        let butt = UIButton()
+        butt.setTitle("Swap!", for: .normal)
         butt.setTitleColor(UIColor.black, for: .normal)
         butt.translatesAutoresizingMaskIntoConstraints = false
         butt.clipsToBounds = true
@@ -105,6 +116,7 @@ class TZMView: UIView {
         changeCurrency1.addTarget(self, action: #selector(changeCurrencyClick(sender:)), for: .touchUpInside)
         changeCurrency2.addTarget(self, action: #selector(changeCurrencyClick(sender:)), for: .touchUpInside)
         calculateButton.addTarget(self, action: #selector(calculateClicked), for: .touchUpInside)
+        swapCurrencyButton.addTarget(self, action: #selector(swapButtonClicked), for: .touchUpInside)
         addSubview(changeCurrency1)
         addSubview(changeCurrency2)
         currencyTF1.delegate = self
@@ -112,6 +124,7 @@ class TZMView: UIView {
         addSubview(currencyTF1)
         addSubview(currencyTF2)
         addSubview(calculateButton)
+        addSubview(swapCurrencyButton)
         
         changeCurrency1.snp.remakeConstraints { (make) in
             make.left.equalTo(self).offset(10)
@@ -126,9 +139,16 @@ class TZMView: UIView {
             make.height.equalTo(changeCurrency1.snp.height)
         }
         
+        swapCurrencyButton.snp.remakeConstraints { (make) in
+            make.centerX.equalTo(self)
+            make.top.equalTo(currencyTF1.snp.bottom).offset(20)
+            make.height.equalTo(30)
+            make.width.equalTo(100)
+        }
+        
         changeCurrency2.snp.remakeConstraints { (make) in
             make.left.equalTo(self).offset(10)
-            make.top.equalTo(changeCurrency1.snp.bottom).offset(40)
+            make.top.equalTo(swapCurrencyButton.snp.bottom).offset(15)
             make.size.equalTo(CGSize(width: 60, height: 50))
         }
         
@@ -148,7 +168,7 @@ class TZMView: UIView {
     }
     
     @objc fileprivate func changeCurrencyClick(sender: UIButton!) {
-        NotificationCenter.default.post(name: NSNotification.Name("CurrencyNeedChange"), object: nil, userInfo: ["currencyNum" : sender.tag])
+        NotificationCenter.default.post(name: NSNotification.Name("CurrencyNeedChange"), object: nil, userInfo: ["currencyNum" : sender.tag, "selectedCurrency" : (sender.titleLabel?.text)!])
     }
     
     @objc fileprivate func currencyChanged(sender: Notification) {
@@ -167,6 +187,14 @@ class TZMView: UIView {
     
     @objc fileprivate func calculateClicked() {
         self.delegate!.calculate(count: Double(currencyTF1.text!)!, from: (changeCurrency1.titleLabel?.text!)!, to: (changeCurrency2.titleLabel?.text!)!)
+    }
+    
+    @objc fileprivate func swapButtonClicked() {
+        let butt1Txt = self.changeCurrency1.titleLabel?.text
+        let butt2Txt = self.changeCurrency2.titleLabel?.text
+        
+        self.changeCurrency1.setTitle(butt2Txt, for: .normal)
+        self.changeCurrency2.setTitle(butt1Txt, for: .normal)
     }
 }
 

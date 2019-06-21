@@ -19,6 +19,9 @@
 		B95B01D722B98601005D7BC7 /* TZAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01D622B98601005D7BC7 /* TZAPI.swift */; };
 		B9E9A0F422BA52F600F1AA72 /* TZFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E9A0F322BA52F600F1AA72 /* TZFunctions.swift */; };
 		B9E9A0F722BA592900F1AA72 /* TZMomentum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9E9A0F522BA592900F1AA72 /* TZMomentum.xcdatamodeld */; };
+		B9F4B98622BCD2BA000F69A7 /* TZMCoreDataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4B98522BCD2BA000F69A7 /* TZMCoreDataWorker.swift */; };
+		B9F4B98C22BD4341000F69A7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4B98B22BD4341000F69A7 /* Reachability.swift */; };
+		B9F4B99222BD53B0000F69A7 /* IJProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F4B99122BD53B0000F69A7 /* IJProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		B95B01D622B98601005D7BC7 /* TZAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZAPI.swift; sourceTree = "<group>"; };
 		B9E9A0F322BA52F600F1AA72 /* TZFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TZFunctions.swift; sourceTree = "<group>"; };
 		B9E9A0F622BA592900F1AA72 /* TZMomentum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TZMomentum.xcdatamodel; sourceTree = "<group>"; };
+		B9F4B98522BCD2BA000F69A7 /* TZMCoreDataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TZMCoreDataWorker.swift; sourceTree = "<group>"; };
+		B9F4B98B22BD4341000F69A7 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B9F4B99122BD53B0000F69A7 /* IJProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IJProgressView.swift; sourceTree = "<group>"; };
 		E0B28D6DDA9D19FA423AE9BC /* Pods-TZMomentum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TZMomentum.debug.xcconfig"; path = "Target Support Files/Pods-TZMomentum/Pods-TZMomentum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +99,8 @@
 				B95B01CC22B98419005D7BC7 /* FirstController */,
 				B95B01CB22B98410005D7BC7 /* API */,
 				B9E9A0F322BA52F600F1AA72 /* TZFunctions.swift */,
+				B9F4B98B22BD4341000F69A7 /* Reachability.swift */,
+				B9F4B99122BD53B0000F69A7 /* IJProgressView.swift */,
 				B95B01B622B983F7005D7BC7 /* AppDelegate.swift */,
 				B95B01B822B983F7005D7BC7 /* ViewController.swift */,
 				B95B01BA22B983F7005D7BC7 /* Main.storyboard */,
@@ -126,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B95B01D422B98467005D7BC7 /* TZMModel.swift */,
+				B9F4B98522BCD2BA000F69A7 /* TZMCoreDataWorker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,10 +279,13 @@
 				B95B01B922B983F7005D7BC7 /* ViewController.swift in Sources */,
 				B95B01D122B98447005D7BC7 /* TZMFirstViewController.swift in Sources */,
 				B9E9A0F422BA52F600F1AA72 /* TZFunctions.swift in Sources */,
+				B9F4B98622BCD2BA000F69A7 /* TZMCoreDataWorker.swift in Sources */,
+				B9F4B99222BD53B0000F69A7 /* IJProgressView.swift in Sources */,
 				B95B01D522B98467005D7BC7 /* TZMModel.swift in Sources */,
 				B95B01D322B98458005D7BC7 /* TZMView.swift in Sources */,
 				B95B01D722B98601005D7BC7 /* TZAPI.swift in Sources */,
 				B95B01B722B983F7005D7BC7 /* AppDelegate.swift in Sources */,
+				B9F4B98C22BD4341000F69A7 /* Reachability.swift in Sources */,
 				B9E9A0F722BA592900F1AA72 /* TZMomentum.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,7 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AM96636MZX;
+				DEVELOPMENT_TEAM = EFD84KA5HP;
 				INFOPLIST_FILE = TZMomentum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -442,7 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AM96636MZX;
+				DEVELOPMENT_TEAM = EFD84KA5HP;
 				INFOPLIST_FILE = TZMomentum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

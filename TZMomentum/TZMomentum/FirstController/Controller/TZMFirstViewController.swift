@@ -19,7 +19,8 @@ class TZMFirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createKVOServers()
-        TZFunctions().setupNavigationController(navigationCtrl: self.navigationController, navigationItem: self.navigationItem, navigationTitle: "Money converter", leftButton: nil, rightButton: nil)
+        let updateButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(getCurrencyFromModel))
+        TZFunctions().setupNavigationController(navigationCtrl: self.navigationController, navigationItem: self.navigationItem, navigationTitle: "Money converter", leftButton: nil, rightButton: updateButton)
 //        TZMModel.sharedModel.workWithCoreData()
         createView()
     }
@@ -47,20 +48,21 @@ class TZMFirstViewController: UIViewController {
     
     @objc fileprivate func currencyNeedChange(sender: Notification) {
         currencyChange = sender.userInfo!["currencyNum"] as! Int
-        showPickerView(true)
+        showPickerView(true, data: sender.userInfo!)
     }
     
-    fileprivate func showPickerView(_ show: Bool) {
+    fileprivate func showPickerView(_ show: Bool, data: Any) {
         if show {
+            view.endEditing(true)
             view.addSubview(pickerView)
             pickerView.snp.remakeConstraints { (make) in
                 make.bottom.equalTo(view)
                 make.left.right.equalTo(view)
             }
             if currencyChange == 1 {
-//                self.pickerView.selectRow(1, inComponent: 1, animated: true)
+                self.pickerView.selectRow(currencyNamesArray.index(of: (data as! [AnyHashable : Any])["selectedCurrency"] as! String)!, inComponent: 0, animated: true)
             } else {
-//                self.pickerView.selectRow(1, inComponent: 1, animated: true)
+                self.pickerView.selectRow(currencyNamesArray.index(of: (data as! [AnyHashable : Any])["selectedCurrency"] as! String)!, inComponent: 0, animated: true)
             }
         } else {
             pickerView.removeFromSuperview()
@@ -68,18 +70,13 @@ class TZMFirstViewController: UIViewController {
     }
     
     // MARK: - Buttons handler
-    func getCurrencyFromModel() {
-        
-//        TZMModel.sharedModel.getFromCoreData { (success, array) in
-//            print(array)
-//        }
-        
+    @objc func getCurrencyFromModel() {
+        IJProgressView.shared.showProgressView()
         TZMModel.sharedModel.getDatas { (success, response, error) in
             if success && error.count == 0 {
-                self.pickerTitles = response as! Array
-                DispatchQueue.main.async {
-                    self.pickerView.reloadAllComponents()
-                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
+                    IJProgressView.shared.hideProgressView()
+                })
             }
         }
     }
@@ -94,7 +91,7 @@ extension TZMFirstViewController: TZMViewDelegate {
     
     func textFieldBeginEditing(textField: UITextField) {
         print(#function)
-        showPickerView(false)
+        showPickerView(false, data: [:])
     }
     
     func textFieldEndEditing(textField: UITextField) {
@@ -115,16 +112,16 @@ extension TZMFirstViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.pickerTitles.count
+        return currencyNamesArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(#function)
-        print(pickerTitles[row])
-        NotificationCenter.default.post(name: NSNotification.Name("CurrencyChanged"), object: nil, userInfo: ["currencyNum" : currencyChange, "currencyName" : pickerTitles[row]])
+        print(currencyNamesArray[row])
+        NotificationCenter.default.post(name: NSNotification.Name("CurrencyChanged"), object: nil, userInfo: ["currencyNum" : currencyChange, "currencyName" : currencyNamesArray[row]])
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.pickerTitles[row]
+        return currencyNamesArray[row]
     }
 }
