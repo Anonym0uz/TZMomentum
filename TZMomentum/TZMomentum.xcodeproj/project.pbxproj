@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3D5D31EFD51F23E4E35AE367 /* Pods_TZMomentum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D88BED2349307DA9149DE9 /* Pods_TZMomentum.framework */; };
 		B95B01B722B983F7005D7BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01B622B983F7005D7BC7 /* AppDelegate.swift */; };
-		B95B01B922B983F7005D7BC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95B01B822B983F7005D7BC7 /* ViewController.swift */; };
 		B95B01BC22B983F7005D7BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95B01BA22B983F7005D7BC7 /* Main.storyboard */; };
 		B95B01C122B983F8005D7BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B95B01C022B983F8005D7BC7 /* Assets.xcassets */; };
 		B95B01C422B983F8005D7BC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B95B01C222B983F8005D7BC7 /* LaunchScreen.storyboard */; };
@@ -29,7 +28,6 @@
 		80D88BED2349307DA9149DE9 /* Pods_TZMomentum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TZMomentum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95B01B322B983F7005D7BC7 /* TZMomentum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TZMomentum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B95B01B622B983F7005D7BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B95B01B822B983F7005D7BC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B95B01BB22B983F7005D7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B95B01C022B983F8005D7BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B95B01C322B983F8005D7BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,13 +94,12 @@
 		B95B01B522B983F7005D7BC7 /* TZMomentum */ = {
 			isa = PBXGroup;
 			children = (
-				B95B01CC22B98419005D7BC7 /* FirstController */,
-				B95B01CB22B98410005D7BC7 /* API */,
+				B95B01B622B983F7005D7BC7 /* AppDelegate.swift */,
 				B9E9A0F322BA52F600F1AA72 /* TZFunctions.swift */,
+				B95B01CB22B98410005D7BC7 /* API */,
+				B95B01CC22B98419005D7BC7 /* FirstController */,
 				B9F4B98B22BD4341000F69A7 /* Reachability.swift */,
 				B9F4B99122BD53B0000F69A7 /* IJProgressView.swift */,
-				B95B01B622B983F7005D7BC7 /* AppDelegate.swift */,
-				B95B01B822B983F7005D7BC7 /* ViewController.swift */,
 				B95B01BA22B983F7005D7BC7 /* Main.storyboard */,
 				B95B01C022B983F8005D7BC7 /* Assets.xcassets */,
 				B95B01C222B983F8005D7BC7 /* LaunchScreen.storyboard */,
@@ -276,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B95B01B922B983F7005D7BC7 /* ViewController.swift in Sources */,
 				B95B01D122B98447005D7BC7 /* TZMFirstViewController.swift in Sources */,
 				B9E9A0F422BA52F600F1AA72 /* TZFunctions.swift in Sources */,
 				B9F4B98622BCD2BA000F69A7 /* TZMCoreDataWorker.swift in Sources */,

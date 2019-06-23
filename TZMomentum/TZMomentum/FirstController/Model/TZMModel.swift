@@ -39,38 +39,33 @@ class TZMModel: NSObject {
     func calculate(value: Double, from: String, to: String) -> Double {
         
         let val = TZMCoreDataWorker.coreDataShared.getValue(currency: from + to)
-        print("normal: " + String(val))
         
-        let first = value
-        var sec = val
-        var sum = first * sec
+        let fromValue = value
+        var toValue = val
+        var sum = fromValue * toValue
         if val == 0.0 {
-            sec = TZMCoreDataWorker.coreDataShared.getValue(currency: to + from)
-            if sec == 0.0 {
-                // Search in array
-            }
-            sum = first / sec
-        }
-        
-        if !TZMCoreDataWorker.coreDataShared.currencyExists(currency: from + to) && !TZMCoreDataWorker.coreDataShared.currencyExists(currency: to + from) {
-            print(TZMCoreDataWorker.coreDataShared.getValue(currency: from + "USD"))
-            sec = TZMCoreDataWorker.coreDataShared.getValue(currency: from + "USD")
-            if sec == 0 {
-                sec = TZMCoreDataWorker.coreDataShared.getValue(currency: "USD" + from)
-                sum = first / sec
-            } else {
-                sum = first * sec
-            }
-            print(TZMCoreDataWorker.coreDataShared.getValue(currency: "USD" + to))
-            sec = TZMCoreDataWorker.coreDataShared.getValue(currency: "USD" + to)
-            if sec == 0 {
-                sec = TZMCoreDataWorker.coreDataShared.getValue(currency: to + "USD")
-                sum = sum/sec
-            } else {
-                sum = sec * sum
+            toValue = TZMCoreDataWorker.coreDataShared.getValue(currency: to + from)
+            sum = fromValue / toValue
+            if toValue == 0.0 {
+                if !TZMCoreDataWorker.coreDataShared.currencyExists(currency: from + to) && !TZMCoreDataWorker.coreDataShared.currencyExists(currency: to + from) {
+                    toValue = TZMCoreDataWorker.coreDataShared.getValue(currency: from + "USD")
+                    if toValue == 0 {
+                        toValue = TZMCoreDataWorker.coreDataShared.getValue(currency: "USD" + from)
+                        sum = fromValue / toValue
+                    } else {
+                        sum = fromValue * toValue
+                    }
+                    toValue = TZMCoreDataWorker.coreDataShared.getValue(currency: "USD" + to)
+                    if toValue == 0 {
+                        toValue = TZMCoreDataWorker.coreDataShared.getValue(currency: to + "USD")
+                        sum = sum / toValue
+                    } else {
+                        sum = toValue * sum
+                    }
+                }
             }
         }
-        
-        return sum
+        let sumStr = String(format: "%.4f", sum)
+        return Double(sumStr)!
     }
 }

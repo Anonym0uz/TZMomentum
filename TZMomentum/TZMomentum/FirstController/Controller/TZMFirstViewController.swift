@@ -101,7 +101,7 @@ class TZMFirstViewController: UIViewController {
         IJProgressView.shared.showProgressView()
         TZMModel.sharedModel.getDatas { (success, response, error) in
             if success && error.count == 0 {
-                self.animateNavBar(title: "Данные успешно обновлены!")
+                self.animateNavBar(title: "Успех!")
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                     IJProgressView.shared.hideProgressView()
                     self.animateNavBar(title: "Money converter")
@@ -132,9 +132,8 @@ class TZMFirstViewController: UIViewController {
 
 extension TZMFirstViewController: TZMViewDelegate {
     func calculate(count: Double, from: String, to: String) {
-        let cooo = TZMModel.sharedModel.calculate(value: count, from: from, to: to)
-        print(cooo)
-        mview.currencyTF2.text = String(cooo)
+        let calculateCount = TZMModel.sharedModel.calculate(value: count, from: from, to: to)
+        mview.currencyTF2.text = String(calculateCount)
     }
     
     func textFieldBeginEditing(textField: UITextField) {
